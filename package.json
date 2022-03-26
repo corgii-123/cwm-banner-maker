@@ -1,0 +1,36 @@
+{
+  "name": "cwm-banner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --open --env development",
+    "build": "webpack --env production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
+    "babel-loader": "^8.2.4",
+    "clean-webpack-plugin": "^4.0.0",
+    "core-js": "^3.21.1",
+    "html-webpack-plugin": "^5.5.0",
+    "react-refresh": "^0.11.0",
+    "regenerator-runtime": "^0.13.9",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "@nfteyez/sol-rayz": "^0.10.2",
+    "@solana/web3.js": "^1.36.0",
+    "axios": "^0.26.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

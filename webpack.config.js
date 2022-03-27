@@ -9,6 +9,7 @@ const rootDir = process.cwd()
 
 module.exports = function (config) {
   const isProduction = !!config.production
+  process.env.isProduction = isProduction;
 
   return {
     mode: isProduction ? 'production' : 'development',
@@ -20,13 +21,14 @@ module.exports = function (config) {
     output: {
       filename: 'bundle.[chunkhash:6].js',
       path: path.resolve(__dirname, './build'),
-      publicPath: '/'
+      publicPath: isProduction ? './' : '/'
     },
     externals: isProduction ? {
       'react': 'React',
       'react-dom': 'ReactDOM',
       'axios': 'axios',
-      '@solana/web3.js': 'solanaWeb3'
+      '@solana/web3.js': 'solanaWeb3',
+      'fabric': 'fabric'
     } : {},
     module: {
       rules: [

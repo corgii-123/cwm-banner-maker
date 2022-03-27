@@ -7,6 +7,6 @@ module.exports = {
     ['@babel/preset-react']
   ],
   plugins: [
-    ['react-refresh/babel']
-  ]
+    !process.env.isProduction && ['react-refresh/babel']
+  ].filter(Boolean)
 }

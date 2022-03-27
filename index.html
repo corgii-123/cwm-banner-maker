@@ -8,6 +8,8 @@
   </head>
   <body>
     <div id="app"></div>
+
+    <canvas id="canvas" width="300" height="300"></canvas>
     <% if (process.env.NODE_ENV === 'production') { %>
     <script
       crossorigin
@@ -17,8 +19,15 @@
       crossorigin
       src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
     ></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
-    <%}%>
+    <script
+      crossorigin
+      src="https://unpkg.com/axios/dist/axios.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"
+    ></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/fabric.js/521/fabric.min.js"></script>
+    <% } %>
   </body>
 </html>

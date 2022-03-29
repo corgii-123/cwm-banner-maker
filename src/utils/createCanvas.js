@@ -27,7 +27,11 @@ export function createFabric() {
 export function addCWM(nftData, canvas) {
   fabric.Image.fromURL(nftData[0].data.image, function (oImg) {
     // scale image down, and flip it, before adding it onto canvas
-    oImg.scale(0.1).set('flipX', true);
+    oImg.scale(0.2).set('flipX', true);
+    oImg.opacity = 0.5
+    oImg.filters.push(new fabric.Image.filters.Polaroid());
+    oImg.applyFilters();
     canvas.add(oImg);
-  });
+    canvas.setActiveObject(oImg)
+  }, { crossOrigin: 'anonymous' });
 }
